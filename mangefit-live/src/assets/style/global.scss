@@ -1,0 +1,15 @@
+@use './variables.scss';
+@use './reset.scss';
+
+@font-face {
+    font-family: 'Arima';
+    src: url('../fonts/Arima/Arima-VariableFont_wght.ttf');
+    font-weight: normal;
+}
+
+#app{
+    font-family: 'Arima';
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
