@@ -11,14 +11,14 @@
     font-weight: normal;
 }
 
-.app-dark-texture-background{
+.app-dark-texture-background {
     background-color: var(--app-dark-background);
     background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
 }
 
 
 
-#app{
+#app {
     font-family: 'Arima';
     // min-width: 100vw;
     // min-height: 100vh;
@@ -26,31 +26,37 @@
     height: 100%;
     background-color: var(--app-background);
     display: flex;
-    align-items:  flex-start;
+    align-items: flex-start;
     justify-content: center;
-    
+
 }
 
-.responsive-small-image{
+.responsive-small-image {
     height: 2rem;
 }
 
-.responsive-big-image{    
+.responsive-big-image {
     max-width: 12rem;
     max-height: 12rem;
 }
 
-.up-element{
+.up-element {
     position: relative;
     z-index: 2;
-  }
-  a{
+}
+
+.up-element-2{
+    position: relative;
+    z-index: 10;
+}
+
+a {
     text-decoration: none;
     color: black;
     padding: 0.2rem;
-  }
+}
 
-.custom-button-light{
+.custom-button-light {
     font-family: 'Arima';
     background-color: var(--app-light-background);
     border: none;
@@ -59,70 +65,88 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    &:hover{
+
+    &:hover {
         transform: scale(1.05);
-        cursor:pointer;
+        cursor: pointer;
         transition: 1.2s;
     }
 }
 
 .background-circle {
     position: absolute;
-    width: 100vh;    
+    width: 100vh;
     height: 100vh;
-    background-color: #333333;    
+    background-color: var(--app-dark-background);
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
     border-radius: 50%;
     top: 50%;
-    right: -60vh;    
-    transform: translateY(-95,-1);
-    z-index: 1;   
-    top: -60vh; 
+    right: -60vh;
+    transform: translateY(-95, -1);
+    z-index: 1;
+    top: -60vh;
     right: 50%;
-    transform: translate(50%, 0); 
-  }
+    transform: translate(50%, 0);
+}
 
-@media (min-width: 500px){
-    .responsive-small-image{
+.background-wallpaper {
+    position: absolute;
+    width: 100vw;
+    height: 15rem;
+    background-image: url('/stand2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+@media (min-width: 500px) {
+    .responsive-small-image {
         height: 3rem;
     }
-    .responsive-big-image{    
+
+    .responsive-big-image {
         max-width: 21rem;
         max-height: 21rem;
     }
+
     .background-circle {
         position: absolute;
-        width: 100vh;    
+        width: 100vh;
         height: 100vh;
-        background-color: #333333;    
+        background-color: #333333;
         border-radius: 50%;
         top: 50%;
-        right: -60vh;    
+        right: -60vh;
         transform: translateY(-50%);
-        z-index: 1;    
-      }
+        z-index: 1;
+    }
 }
 
 
-@media (min-width: 1024px){
-    .responsive-small-image{
+@media (min-width: 1024px) {
+    .responsive-small-image {
         height: 3rem;
     }
-    .responsive-big-image{    
+
+    .responsive-big-image {
         max-width: 30rem;
         max-height: 30rem;
     }
 
     .background-circle {
         position: absolute;
-        width: 120vh;    
+        width: 120vh;
         height: 120vh;
-        background-color: #333333;    
+        background-color: #333333;
         border-radius: 50%;
         top: 50%;
-        right: -60vh;    
+        right: -60vh;
         transform: translateY(-50%);
-        z-index: 1;    
-      }
+        z-index: 1;
+    }
 }
 
 

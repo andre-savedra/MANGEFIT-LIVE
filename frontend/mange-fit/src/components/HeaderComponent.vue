@@ -5,7 +5,7 @@ import { ref, onMounted } from "vue";
 <template>
   <header  class="align-items-center header-container">
     <img id="logo-img" class="responsive-small-image mr-2 ml-2" src="/logo.webp" alt="logo">
-   <div class="col menu">
+   <div class="col menu ">
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/order">Menu</RouterLink>
     <RouterLink to="/cart">Carrinho</RouterLink>
@@ -50,8 +50,7 @@ import { ref, onMounted } from "vue";
   }
 
   .menu{
-    background-color: var(--app-background);
-    z-index: 0;
+    z-index: 3;
     a{
       padding: 1rem;
     }
