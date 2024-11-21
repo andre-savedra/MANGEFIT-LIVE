@@ -1,0 +1,59 @@
+@use 'primeflex/primeflex.scss';
+@use 'primeicons/primeicons.css';
+@use './reset.scss';
+@use './variables.scss';
+
+
+@font-face {
+    font-family: 'Arima';
+    src: url('../fonts/Arima/Arima-VariableFont_wght.ttf');
+    font-weight: normal;
+}
+
+.app-dark-texture-background{
+    background-color: var(--app-dark-background);
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+}
+
+#app{
+    font-family: 'Arima';
+    // min-width: 100vw;
+    // min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    background-color: var(--app-background);
+    display: flex;
+    align-items:  flex-start;
+    justify-content: center;
+}
+
+.responsive-small-image{
+    height: 2rem;
+}
+
+.custom-button-light{
+    font-family: 'Arima';
+    background-color: var(--app-light-background);
+    border: none;
+    border-radius: 1rem;
+    padding: 0.3rem 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover{
+        transform: scale(1.05);
+        cursor:pointer;
+        transition: 1.2s;
+    }
+}
+
+@media (min-width: 1024px){
+    .responsive-small-image{
+        height: 3rem;
+    }
+}
+
+
+.teste {
+    background-color: red !important;
+}
