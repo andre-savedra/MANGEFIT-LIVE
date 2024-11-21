@@ -56,7 +56,8 @@ class Salada(models.Model):
     categoria = models.CharField(max_length=100, choices=CATEGORIAS)
     ingredientes = models.ManyToManyField(Ingrediente)
     avaliacao = models.DecimalField(max_digits=4,decimal_places=2,default=0.0)
-    
+    foto = models.FileField(upload_to="fotos_saladas", null=True, blank=True)
+
     def __str__(self):
         return self.nome
 

@@ -9,9 +9,8 @@ import App from './App.vue'
 import router from './router'
 import piniaPlugin from "pinia-plugin-persistedstate";
 
-import Aura from '@primevue/themes/aura';
 import Menubar from 'primevue/menubar';
-
+import TabMenu  from 'primevue/tabmenu';
 
 const app = createApp(App)
 const pinia = createPinia()
@@ -22,12 +21,9 @@ pinia.use(piniaPlugin)
 app.use(pinia)
 app.use(router)
 
-app.use(PrimeVue,{
-    theme: {
-        preset: Aura
-    }
-});
+app.use(PrimeVue);
 app.component('Menubar', Menubar);
+app.component('TabMenu', TabMenu);
 
 
 app.mount('#app')

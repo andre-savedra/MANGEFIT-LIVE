@@ -1,28 +1,18 @@
 <script setup lang="ts">
-import { ref } from "vue";
-const items = ref([
-  {
-    label: 'TESTE',
-    icon: 'pi pi-home'
-  },
-  {
-    label: 'Menu',
-    icon: 'pi pi-shopping-bag',    
-  },
-  {
-    label: 'Carrinho',
-    icon: 'pi pi-shopping-cart'
-  }
-]);
+import { ref, onMounted } from "vue";
 
 </script>
 <template>
-  <header class="align-items-center header-container">
+  <header  class="align-items-center header-container">
     <img id="logo-img" class="responsive-small-image mr-2 ml-2" src="/logo.webp" alt="logo">
-    <Menubar :model="items" class="col menu" />
-    <button class="mr-2 ml-2 custom-button-light">
+   <div class="col menu">
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/order">Menu</RouterLink>
+    <RouterLink to="/cart">Carrinho</RouterLink>
+   </div>
+    <button class="mr-2 ml-2 custom-button-light up-element">
       <i class="pi pi-sign-in mr-2"></i>
-      Entrar
+      <RouterLink to="/login">Entrar</RouterLink>
     </button>
   </header>
 </template>
@@ -32,10 +22,18 @@ const items = ref([
 .header-container {
   display: flex;
   height: var(--app-header-height);
+  
 
+  
   .menu {
-    background-color: var(--app-background);
     border: none;
+    position: relative;
+    z-index: 2;
+
+    
+    .router-link-exact-active{
+      font-weight: bold
+    }
   }
 
   #logo-img {
@@ -45,7 +43,19 @@ const items = ref([
 
 
 @media (min-width: 500px) {
-  .header-container{
+  .header-container{    
+  button{
+    position: relative;
+    z-index: 2;
+  }
+
+  .menu{
+    background-color: var(--app-background);
+    z-index: 0;
+    a{
+      padding: 1rem;
+    }
+  }
 
     #logo-img {
       display: block;

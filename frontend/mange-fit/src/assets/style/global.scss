@@ -2,6 +2,7 @@
 @use 'primeicons/primeicons.css';
 @use './reset.scss';
 @use './variables.scss';
+@use 'primevue/resources/themes/aura-light-green/theme.css';
 
 
 @font-face {
@@ -15,6 +16,8 @@
     background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
 }
 
+
+
 #app{
     font-family: 'Arima';
     // min-width: 100vw;
@@ -25,11 +28,27 @@
     display: flex;
     align-items:  flex-start;
     justify-content: center;
+    
 }
 
 .responsive-small-image{
     height: 2rem;
 }
+
+.responsive-big-image{    
+    max-width: 12rem;
+    max-height: 12rem;
+}
+
+.up-element{
+    position: relative;
+    z-index: 2;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+    padding: 0.2rem;
+  }
 
 .custom-button-light{
     font-family: 'Arima';
@@ -47,10 +66,63 @@
     }
 }
 
+.background-circle {
+    position: absolute;
+    width: 100vh;    
+    height: 100vh;
+    background-color: #333333;    
+    border-radius: 50%;
+    top: 50%;
+    right: -60vh;    
+    transform: translateY(-95,-1);
+    z-index: 1;   
+    top: -60vh; 
+    right: 50%;
+    transform: translate(50%, 0); 
+  }
+
+@media (min-width: 500px){
+    .responsive-small-image{
+        height: 3rem;
+    }
+    .responsive-big-image{    
+        max-width: 21rem;
+        max-height: 21rem;
+    }
+    .background-circle {
+        position: absolute;
+        width: 100vh;    
+        height: 100vh;
+        background-color: #333333;    
+        border-radius: 50%;
+        top: 50%;
+        right: -60vh;    
+        transform: translateY(-50%);
+        z-index: 1;    
+      }
+}
+
+
 @media (min-width: 1024px){
     .responsive-small-image{
         height: 3rem;
     }
+    .responsive-big-image{    
+        max-width: 30rem;
+        max-height: 30rem;
+    }
+
+    .background-circle {
+        position: absolute;
+        width: 120vh;    
+        height: 120vh;
+        background-color: #333333;    
+        border-radius: 50%;
+        top: 50%;
+        right: -60vh;    
+        transform: translateY(-50%);
+        z-index: 1;    
+      }
 }
 
 
